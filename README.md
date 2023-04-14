@@ -19,6 +19,7 @@ It's my first project made without tutorial - TodoList. With this project i've l
 - Anyone can create his own account
 - Create your tasks to not forget about important things
 - Mark a task if you've done it already
+- Look how many uncompleted tasks you have
 - Update and delete tasks
 - Tasks search
 
