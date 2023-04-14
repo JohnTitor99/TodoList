@@ -1,0 +1,22 @@
+{% extends 'main.html' %}
+
+{% block body %}
+
+<div class="login-window">
+    <div class="add-window-header w-100 border border-primary rounded-top bg-primary">
+        <a href="{{ url_for('main_page') }}" class="position-absolute text-light text-decoration-none h4 m-2">← Back</a>
+        <h1 class="text-light text-decoration-none h4 m-2 text-center">Profile</h1>
+    </div>
+    <center>
+        <div class="login-page-body w-100 border border-top-0 border-primary rounded-bottom">
+            <br><br>
+            <h5 class="text-dark">Username: {{ current_user }}</h5>
+            <br><br>
+            <a href="{{ url_for('username_change') }}" class="btn btn-danger">Change Username</a>
+            <br><br>
+            <a href="{{ url_for('password_change') }}" class="btn btn-danger">Change Password</a>
+        </div>
+    </center>
+</div>
+
+{% endblock %}

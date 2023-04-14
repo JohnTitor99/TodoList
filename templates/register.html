@@ -1,0 +1,30 @@
+{% extends 'main.html' %}
+
+{% block body %}
+
+<div class="login-window">
+    <div class="add-window-header w-100 border border-primary rounded-top bg-primary text-center">
+        <h1 class="text-light text-decoration-none h4 m-2">Register Page</h1>
+    </div>
+    <center>
+        <div class="login-page-body w-100 border border-top-0 border-primary rounded-bottom">
+            <form method="POST">
+                {{ form.hidden_tag() }}
+                <br><br>
+                <label>Username:</label>
+                <br>
+                {{ form.username }}
+                <br><br>
+                <label>Password:</label>
+                <br>
+                {{ form.password }}
+                <br><br>
+                {{ form.submit }}
+            </form>
+            <br>
+            <a href="{{ url_for('login') }}">Already have an acccount? Sign In</a>
+        </div>
+    </center>
+</div>
+
+{% endblock %}

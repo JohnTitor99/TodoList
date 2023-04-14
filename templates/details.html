@@ -1,0 +1,29 @@
+{% extends 'main.html' %}
+
+{% block body %}
+
+
+<div class="add-window">
+    <div class="add-window-header w-100 border border-primary rounded-top bg-primary">
+        <a href="{{ url_for('main_page') }}" class="position-absolute text-light text-decoration-none h4 m-2">← Back</a>
+    </div>
+    <center>
+        <div class="add-window-body w-100 border border-top-0 border-primary rounded-bottom">
+            <form method="POST">
+                <br><br>
+                <label>Title:</label>
+                <br>
+                <input type="text" class="add-title-field" name="title-update" value="{{ task.title }}" required>
+                <br><br>
+                <label>Description:</label>
+                <br>
+                <textarea class="add-des-field" name="des-update">{{ task.description }}</textarea>
+                <br><br>
+                <input type="submit" name="update-form" value="Update">
+            </form>
+        </div>
+    </center>
+</div>
+
+
+{% endblock %}

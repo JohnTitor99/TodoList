@@ -1,0 +1,48 @@
+{% extends 'main.html' %}
+
+{% block body %}
+
+<center>
+    <div class="tasks-header border border-bottom-0 border-primary rounded-top bg-primary mt-4 pt-3">
+        <a href="/" class="text-center text-decoration-none"><h1>My Tasks</h1></a>
+        <p class="text-center">
+            <a href="{{ url_for('profile') }}" class="text-decoration-none text-light">Hello, {{ current_user }}</a>
+            <a href="{{ url_for('logout') }}" class="text-decoration-none text-warning">Logout</a>
+        </p>
+        <h5 class="text-light">You have {{ uncompleted_tasks }} uncompleted tasks.</h5>
+    </div>
+</center>
+
+
+<div class="main-container border border-primary rounded-bottom">
+    <!-- search form -->
+    <form method="GET">
+        <input type="text" name="q" placeholder="Search..." class="search-input mt-4 mb-3">
+        <input type="submit" value="Search" class="btn btn-primary mb-1">
+    </form>
+    
+    <!-- add form -->
+    <form method="POST" class="position-absolute add-new-plus">
+        <a href="{{ url_for('add') }}" class="text-decoration-none h1">+</a>
+    </form>
+    <div class="m-4">
+        {% for task in tasks %}
+        <hr>
+            <div>
+                {% if task.completed %}
+                    ✔<s><i><a href="/complete/{{ task.id }}" class="text-decoration-none h5">{{ task.title }}</a></i></s>
+                {% else %}
+                    <a href="/complete/{{ task.id }}" class="text-decoration-none h5">{{ task.title }}</a>
+                {% endif %}
+                
+                <a href="/delete/{{ task.id }}" class="btn btn-danger btn-sm float-end">Delete</a>
+                <a class="text-white float-end">f</a> <!-- its just for space beetwen buttons bcs margin doesn't work and i don't know why -->
+                <a href="{{ url_for('update', id=task.id) }}" class="btn btn-secondary btn-sm float-end">Details</a>
+                
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+{% endblock %}

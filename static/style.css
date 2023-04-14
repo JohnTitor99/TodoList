@@ -1,0 +1,70 @@
+.tasks-header {
+    height: 150px;
+    width: 600px;
+}
+
+.tasks-header h1, p {
+    color: white;
+}
+
+/* .tasks-header a {
+    color: yellow;
+} */
+
+.main-container {
+    width: 600px;
+    margin-left: 468px;
+}
+
+.search-input {
+    margin-left: 20px;
+    height: 35px;
+    width: 300px;
+}
+
+.add-input {
+    margin-left: 20px;
+    height: 35px;
+    width: 480px;
+}
+
+.add-window {
+    height: 500px;
+    width: 600px;
+    margin-top: 60px;
+    margin-left: 468px;
+}
+
+.add-window-header {
+    height: 50px;
+}
+
+.add-window-body {
+    height: 450px;
+}
+
+
+.form-field {
+    height: 40px;
+    width: 80%;
+}
+
+.add-des-field {
+    height: 200px;
+    width: 80%;
+}
+
+.add-new-plus {
+    margin-top: -60px;
+    margin-left: 550px;
+}
+
+.login-window {
+    width: 400px;
+    margin-top: 60px;
+    margin-left: 568px;
+}
+
+.login-page-body {
+    height: 350px;
+}
